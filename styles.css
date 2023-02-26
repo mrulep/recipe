@@ -1,0 +1,719 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+/*
+Colors:
+    #0D0D0D
+    #F2F2F2
+    #7ABFBF
+    rgba(122, 191, 191, .5)
+    #EB5428
+*/
+
+html {
+    background-color: rgba(122, 191, 191, .5);
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+h1, h2, h3, nav a, nav span, menu li, #social li, footer {
+    font-family: 'Bebas Neue', cursive;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 25px;
+    text-align: left;
+}
+
+aside {
+    padding: 5px;
+}
+
+nav a, nav span, menu li, #social li, footer {
+    font-size: 20px;
+}
+
+p, dd, li, nav, input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+dt {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #EB5428;
+    text-align: center;
+    margin-top: -10px;
+    padding: 0px;
+}
+
+nav img {
+    width: 50px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+nav img:hover + a, nav img:hover, #avatar:hover, #avatar:hover svg, nav li:hover, nav li a:hover { 
+    color:#FFF;
+    cursor: pointer;
+    background-color: #EB5428;
+    stroke: #FFF;
+}
+
+nav img:hover, menu svg:hover, #social svg:hover {
+    cursor: pointer;
+}
+
+.option {
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+
+menu {
+    color: #EB5428;
+    width: 414px;
+    text-align: center;
+    padding-left: 0px;
+}
+
+menu li {
+    list-style-type: none;
+}
+
+menu a {
+    padding: 3px;
+    text-decoration: none;
+    color: #0D0D0D;
+}
+
+menu a:hover, #social a:hover {
+    color: #FFF;
+    background-color: #EB5428;
+}
+
+aside {
+    background-color: #7ABFBF;
+}
+
+#social ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#social li {
+    list-style-type: none;
+    color: #EB5428;
+    text-align: center;
+}
+
+#social a {
+    padding: 3px;
+    text-decoration: none;
+    color: #0D0D0D;
+}
+
+p {
+    padding: 10px;
+}
+
+aside p {
+    padding: 0px;
+}
+
+aside a {
+    text-decoration: none;
+    color: #0D0D0D;
+}
+
+aside a section:hover {
+    background-color: #EBA30B;
+    transition: background-color .5s;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+}
+
+form input {
+    border: solid 1px #EB5428;
+    height: 40px;
+    width: 300px;
+}
+
+form svg {
+    background-color: #EB5428;
+    padding: 2px;
+}
+
+form label {
+    padding: 0px;
+}
+
+#avatar {
+    font-family: 'Bebas Neue', cursive;
+}
+
+@media screen and (min-width: 414px) {
+    h1 {
+        text-align: center;
+        padding-top: 150px;
+    }
+
+    body {
+        width: 414px;
+        margin: 0 auto;
+    }
+
+    #tacos img {
+        width: 414px;
+        height: auto;
+    }
+
+    nav {
+        width: 414px;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-row: 1 / 1;
+    }
+
+    nav li a {
+        display: block;
+        padding-right: auto;
+        text-decoration: none;
+        padding: 10px;
+        padding-bottom: 0;
+    }
+
+    aside {
+        grid-template-columns: 1fr;
+    }
+
+    aside img {
+        width: 110px;
+        
+    }
+
+    aside section {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-gap: 0px;
+    }
+
+    aside section img {
+        grid-column-start: 1;
+        margin-top: -25px;
+        margin-left: 10px;
+    }
+
+    aside section p, aside section dl {
+        grid-column-start: 2;
+        padding-top: 0;
+    }
+
+    aside section p {
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+
+    aside section h3 {
+        margin-bottom: 0px;
+        grid-column-start: 2;
+    }
+
+    dd {
+        margin-left: 0px;
+    }
+
+    #logo {
+        background-color: #EB5428;
+    }
+
+    #logo svg {
+        margin-left: 70px;
+        margin-top: 8px;
+        
+    }
+
+    nav li {
+        color: #EB5428;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        padding-left: 0px;
+        grid-row-start: 2;
+        grid-column: 1 / 4;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+    }
+
+    nav li:last-child {
+        position: fixed;
+        top: 0;
+        left: 450px;
+    }
+    
+    nav li img {
+        display: none;
+    }
+    
+    label {
+        cursor: pointer;
+        display: inline-block;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+    label span {
+        background-color: #ffffff;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background-color .2s ease-out;
+        width: 18px;
+    }
+    label span:before, label span:after {
+        background: #ffffff;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    label span:before {
+        top: 5px;
+    }
+    label span:after {
+        top: -5px;
+    }
+    input[type='checkbox'] {
+        display: none;
+    }
+    input[type='checkbox']:checked ~ ul {
+        max-height: 500px;
+    }
+    input[type='checkbox']:checked ~ label span {
+        background: transparent;
+    }
+    input[type='checkbox']:checked ~ label span:before {
+        transform: rotate(-45deg);
+    }
+    input[type='checkbox']:checked ~ label span:after {
+        transform: rotate(45deg);
+    }
+    input[type='checkbox']:checked ~ label:not(.steps) span:before, input[type='checkbox']:checked ~ label:not(.steps) span:after {
+        top: 0;
+    }
+    
+    #details {
+        padding: 5px;
+    }
+
+    #social {
+        grid-row-start: 1;
+    }
+    #social ul {
+        padding-left: 0px;
+    }
+
+    menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #burger {
+        width: 95px;
+        grid-column-start: 1;
+        grid-row-start: 1;
+        margin-left: 10px;
+        padding-bottom: 10px;
+    }
+
+   nav label {
+        padding-top: 20px;
+    }
+
+    #avatar {
+        width: 80px;
+        grid-column-start: 3;
+        text-align: center;
+    }
+
+    footer {
+        width: 414px;
+        display: grid;
+        grid-template-rows: 0.5fr 0.5fr;
+    }
+
+    footer img {
+        grid-row-start: 2;
+        grid-row-end: 2;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    footer small {
+        grid-row-start: 3;
+        grid-row-end: 3;
+        width: 414px;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    form {
+        position: relative;
+        margin: 0 auto;
+        bottom: 2910px;
+        left: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding-top: 150px;
+    }
+
+    h1 {
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 110px;
+    }
+
+    body {
+        width: 768px;
+    }
+
+    nav {
+        width: 768px;
+        padding-top: 40px;
+        padding-bottom: 0px;
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: 1fr 1.2fr;
+        box-shadow: 0 4px 10px -2px gray;
+        grid-row-gap: 10px;
+        grid-template-rows: 1fr 3fr;
+    }
+
+    nav li img {
+        display: block;
+    }
+
+    #logo {
+        position: absolute;
+        top: 0;
+        background-color: #EB5428;
+        width: 75px;
+        margin-left: 0;
+        grid-column: 1 / 1;
+    }
+
+    #logo svg {
+        margin-left: 5px;
+        margin-top: 8px;
+    }
+    
+    nav ul {
+        width: 768px;
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-column-start: 1;
+        margin: 0 auto;
+        grid-row: 2 / 2;
+        padding-bottom: 5px;
+        padding-left: 0px;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav li a {
+        padding-top: 5px;
+    }
+
+    nav li img {
+        position: relative;
+        width: 80px;
+    }
+
+    label span, input[type='checkbox'] {
+        display: none;
+    }
+
+    nav li:last-child {
+        top: -10px;
+        left: 850px;
+        width: 85px;
+    }
+
+
+    menu {
+        position: absolute;
+        margin-top: 0px;
+        width: 768px;
+        background-color: rgba(255, 255, 255, .75);
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    #tacos img {
+        width: 768px;
+    }
+
+    #details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    #details dt {
+        text-align: right;
+    }
+
+    #directions {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        padding: 10px;
+    }
+
+    aside {
+        display: grid;
+        grid-template-columns: 
+        1fr 1fr;
+    }
+
+    aside h2 {
+        grid-column: 1 / 3;
+        text-align: center;
+    }
+
+    footer {
+        width: 768px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding-top: 10px;
+    }
+
+    footer img {
+        grid-row-start: 1;
+    }
+
+    #social {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-column-start: 2;
+        padding-left: 10px;
+    }
+
+    #social ul {
+        grid-gap: 20px;
+    }
+
+    footer small {
+        grid-row-start: 2;
+    }
+
+    form {
+        position: fixed;
+        margin: 0 auto;
+        top: 20px;
+        left: 400px;
+        z-index: 2;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    body {
+        width: 1280px;
+    }
+
+    menu {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 100px 100px 100px;
+        height: auto;
+        width: 200px;
+        background-color: #FFF;
+        height: 844px;
+        padding-top: 50px;
+    }
+
+    #tacos img {
+        width: 600px;
+    }
+    
+
+    nav {
+        width: 1280px;
+        display: grid;
+        grid-template-rows: 1fr 0fr;
+    }
+
+    nav ul {
+        margin-top: -35px;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    label span, input[type='checkbox'] {
+        display: none;
+    }
+
+    nav li:last-child {
+        all: initial;
+        margin-top: -10px;
+    }
+
+    #avatar svg {
+        width: 200px;
+    }
+
+    nav li {
+        width: 40px;
+        text-align: center;
+        margin-left: 80px;
+    }
+
+    nav li a {
+        width: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    nav li img {
+        width: 50px;
+    }
+    
+    #logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    #logo svg {
+        padding-left: 14px;
+        padding-top: 10px;
+    }
+
+    form {
+        position: relative;
+        width: 350px;
+        margin: 0px;
+        top: -2110px;
+        left: 500px;
+        z-index: 0;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    header {
+        margin-top: 0px;
+        padding-top: 200px;
+    }
+
+    #details-sect {
+        background-color: #0D0D0D;
+        color: #7ABFBF;
+        display: grid;
+    }
+
+    aside {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    aside h2 {
+        grid-row: 1 / 1;
+        grid-column: 1 / 5;;
+    }
+
+    aside a {
+        grid-row: 2 / 2;
+    }
+
+    aside a section img {
+        width: 200px;
+        grid-row: 1 / 1;
+        grid-column: 1 / 4;
+        margin-left: 70px;
+        margin-top: 10px;
+    }
+
+    aside a section h3 {
+        grid-row: 2 / 2;
+        margin-left:5px;
+    }
+
+    #social {
+        margin-left: 500px;
+    }
+
+    footer small {
+        grid-column: 2 / 2;
+        grid-row: 1 / 1;
+        margin-left: -150px;
+    }
+
+    footer img {
+        margin-left: 80px;
+    }
+
+    #intro {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #intro #tacos img {
+        grid-column: 1 / 1;
+        margin-left: 200px;
+    }
+
+    #intro #content {
+        grid-column: 2 / 2;
+    }
+}
