@@ -30,7 +30,7 @@ h2 {
     text-align: center;
 }
 
-#social h2 {
+nav h2, footer h2, footer h3 {
     display: none;
 }
 
@@ -218,7 +218,6 @@ aside .desc {
 
     nav li a {
         display: block;
-        padding-right: auto;
         text-decoration: none;
         padding: 10px;
         padding-bottom: 0;
@@ -292,9 +291,9 @@ aside .desc {
     }
 
     nav li:last-child {
-        position: fixed;
+        position: absolute;
         top: -5px;
-        left: 460px;
+        left: 320px;
     }
     
     nav li img {
@@ -409,7 +408,7 @@ aside .desc {
     form {
         position: relative;
         margin: 0 auto;
-        bottom: 2890px;
+        bottom: 2860px;
         left: 30px;
     }
 }
@@ -452,11 +451,12 @@ aside .desc {
         width: 75px;
         margin-left: 0;
         grid-column: 1 / 1;
+        height: 90px;
     }
 
     #logo svg {
         margin-left: 5px;
-        margin-top: 8px;
+        margin-top: 15px;
     }
     
     nav ul {
@@ -494,8 +494,12 @@ aside .desc {
     nav li:last-child {
         position: relative;
         top: -220px;
-        left: 680px;
-        width: 85px;
+        left: 685px;
+        width: 83px;
+    }
+
+    #avatar {
+        height: 90px;
     }
 
 
@@ -566,11 +570,10 @@ aside .desc {
     }
 
     form {
+        left: 35%;
         position: fixed;
-        margin: 0 auto;
         top: 20px;
-        left: 400px;
-        z-index: 2;
+        z-index: 3;
     }
 }
 
@@ -587,6 +590,7 @@ aside .desc {
         background-color: #FFF;
         height: 844px;
         padding-top: 50px;
+        border: solid 2px #EB5428;
     }
 
     #tacos img {
@@ -598,6 +602,7 @@ aside .desc {
         width: 1280px;
         display: grid;
         grid-template-rows: 1fr 0fr;
+        padding-bottom: 10px;
     }
 
     nav ul {
@@ -617,16 +622,24 @@ aside .desc {
     nav li:last-child {
         all: initial;
         margin-top: -10px;
-    }
-
-    #avatar svg {
         width: 200px;
     }
 
+    #avatar {
+        margin-top: 1px;
+        width: 100px;
+        margin-left: 127px;
+    }
+
+    #avatar svg {
+        width: 50px;
+    }
+
     nav li {
-        width: 40px;
+        width: 100px;
         text-align: center;
-        margin-left: 80px;
+        margin-left: 20px;
+        padding-bottom: 0px;
     }
 
     nav li a {
@@ -641,7 +654,7 @@ aside .desc {
     
     #logo {
         width: 100px;
-        height: 100px;
+        height: 109px;
     }
 
     #logo svg {
@@ -653,7 +666,7 @@ aside .desc {
         position: relative;
         width: 350px;
         margin: 0px;
-        top: -2110px;
+        top: -1980px;
         left: 500px;
         z-index: 0;
     }
@@ -675,6 +688,33 @@ aside .desc {
         display: grid;
     }
 
+    #details, #details dt, #details dd {
+        all: initial;
+    }
+
+    #details {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding-bottom: 20px;
+    }
+
+    #details dt, #details dd {
+        color: #7ABFBF;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #details dt {
+        grid-row: 1 / 1;
+        font-weight: bold;
+    }
+
+    #details dd {
+        grid-row: 2 / 2
+    }
+
     aside {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -690,10 +730,26 @@ aside .desc {
     }
 
     aside section dl {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         padding-left: 50px;
         width: 100%;
         grid-column: 1 / 3;
         grid-row: 3 / 3;
+    }
+
+    aside section dt:nth-child(2) {
+        grid-row: 2 / 2;
+    }
+
+    aside section dd {
+        grid-row: 2 / 2;
+        grid-column: 2 / 2;
+        margin-left: -90px;
+    }
+
+    aside a:nth-child(4) .desc {
+        margin-bottom: 30px;
     }
 
     aside a section img {
@@ -737,4 +793,53 @@ aside .desc {
     #intro #content {
         grid-column: 2 / 2;
     }
+}
+
+@media print {
+    html {
+        background-color: #FFF;
+    }
+
+    header, nav, footer, menu, aside, form {
+        display: none;
+    }
+
+    #tacos img {
+        padding-top: 20px;
+        width: 200px;
+        margin-left: 360px;
+    }
+
+    #details {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #0D0D0D;
+    }
+
+    #details dt, #details dd {
+        color: #7ABFBF;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #details dt {
+        grid-row: 1 / 1;
+        font-weight: bold;
+    }
+
+    #details dd {
+        grid-row: 2 / 2;
+        margin-left: 0px;
+    }
+
+    #directions {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        padding: 10px;
+    }
+
 }
