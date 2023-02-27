@@ -17,10 +17,6 @@ body {
     background-color: #F2F2F2;
 }
 
-h1, h2, h3, nav a, nav span, menu li, #social li, footer {
-    font-family: 'Bebas Neue', cursive;
-}
-
 h1 {
     font-size: 40px;
 }
@@ -45,17 +41,6 @@ aside {
 
 nav a, nav span, menu li, #social li, footer {
     font-size: 20px;
-}
-
-p, dd, li, nav, input {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-}
-
-dt {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
 }
 
 nav {
@@ -194,6 +179,21 @@ aside .desc {
 }
 
 @media screen and (min-width: 414px) {
+    h1, h2, h3, nav a, nav span, menu li, #social li, footer {
+        font-family: 'Bebas Neue', cursive;
+    }
+
+    p, dd, li, nav, input {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+    }
+    
+    dt {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
     h1 {
         text-align: center;
         padding-top: 150px;
@@ -798,16 +798,16 @@ aside .desc {
 @media print {
     html {
         background-color: #FFF;
+        margin: 0.5in;
+        overflow: hidden;
+    }
+    
+    * {
+        font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
-    header, nav, footer, menu, aside, form {
+    header, nav, footer, menu, aside, form, img {
         display: none;
-    }
-
-    #tacos img {
-        padding-top: 20px;
-        width: 200px;
-        margin-left: 360px;
     }
 
     #details {
@@ -821,7 +821,6 @@ aside .desc {
 
     #details dt, #details dd {
         color: #7ABFBF;
-        font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         text-align: center;
     }
